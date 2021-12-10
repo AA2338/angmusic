@@ -1,0 +1,9 @@
+.appContainer {
+  margin-bottom: 120px;
+}
+
+.playerContainer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}

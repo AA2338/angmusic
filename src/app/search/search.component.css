@@ -1,0 +1,79 @@
+.container {
+  width: 70%;
+  max-width: 1400px;
+  min-width: 400px;
+  margin: 30px auto 20px auto;
+}
+
+.searchbar {
+  display: flex;
+  justify-self: right;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.searchbar input {
+  width: 50%;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.searchbar img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.artistLink {
+  margin-top: 20px;
+}
+
+.artistLink:hover {
+  color: rgb(47, 189, 241);
+  cursor: pointer;
+}
+
+.releaseLink:hover {
+  color: rgb(38, 164, 209);
+  cursor: pointer;
+}
+
+.artistLinkTable:hover {
+  color: rgb(47, 189, 241);
+  cursor: pointer;
+}
+
+table {
+  width: 80%;
+  margin: 0px 0px 20px 0px;
+}
+
+th,
+td {
+  padding: 5px 0px 5px 10px;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(242, 242, 242);
+}
+
+td,
+.artistLink {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}

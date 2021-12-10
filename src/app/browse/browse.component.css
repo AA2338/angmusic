@@ -1,0 +1,210 @@
+.container {
+  width: 70%;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 30px auto 30px auto;
+}
+
+.browsingButton {
+  font-weight: 100;
+}
+
+.genreContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 20px 0px 30px 10px;
+}
+
+.genreButton {
+  background-color: rgb(213, 221, 225);
+  width: 120px;
+  height: 50px;
+  margin: 0px auto 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 200;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+
+  -webkit-box-shadow: 2px 2px 12px -6px #0000005f;
+  box-shadow: 2px 2px 12px -6px #0000005f;
+}
+
+.genreButton:hover {
+  background-color: rgb(196, 203, 206);
+}
+
+.selectedGenre {
+  background-color: rgb(142, 205, 237);
+}
+
+.selectedGenre:hover {
+  background-color: rgb(121, 175, 202);
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle,
+.mat-radio-outer-circle {
+  border-color: blue !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: blue !important;
+}
+
+.browsingSettings {
+  display: flex;
+  flex-direction: column;
+}
+
+.browsingButton {
+  margin: 0px 0px 20px 0px;
+  border-color: rgb(47, 189, 241);
+}
+
+.releaseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.releasebox {
+  width: 170px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  margin: 0px auto 30px auto;
+}
+
+.releasebox img {
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 2px 2px 12px -6px #000000;
+  box-shadow: 2px 2px 12px -6px #000000;
+}
+
+.releasebox h2,
+.releasebox p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.releaseGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+.hoverColor {
+  text-align: center;
+}
+
+.hoverColor:hover {
+  color: rgb(47, 189, 241);
+  cursor: pointer;
+}
+
+.artistLink:hover {
+  color: rgb(27, 137, 177);
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.genreGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin-bottom: 50px;
+}
+
+.genreboxContainer {
+  width: 170px;
+}
+
+.genrebox {
+  width: 90%;
+  min-width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+
+  -webkit-box-shadow: 2px 2px 12px -6px #000000;
+  box-shadow: 2px 2px 12px -6px #000000;
+}
+
+.genrebox:hover {
+  -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.Pop {
+  background-color: #ecd368;
+}
+
+.Rock {
+  background-color: #dd7556;
+}
+
+.Electronic {
+  background-color: #4b9088;
+}
+
+.Blues {
+  background-color: #1f6b90;
+}
+
+@media only screen and (max-width: 1000px) {
+  .releasebox {
+    width: 150px;
+    height: 230px;
+  }
+
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .releasebox {
+    width: 130px;
+    height: 210px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .genreButton {
+    width: 90px;
+  }
+}

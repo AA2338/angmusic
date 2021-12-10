@@ -1,0 +1,69 @@
+.container {
+  width: 70%;
+  max-width: 1600px;
+  min-width: 400px;
+  margin: 50px auto 20px auto;
+}
+
+.hoverColor {
+  text-align: center;
+}
+
+.hoverColor:hover {
+  color: rgb(47, 189, 241);
+  cursor: pointer;
+}
+
+.releaseGrid {
+  width: 75%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.releasebox {
+  width: 170px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.releasebox img {
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 2px 2px 12px -6px #000000;
+  box-shadow: 2px 2px 12px -6px #000000;
+}
+
+.releasebox h2,
+.releasebox p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1000px) {
+  .releasebox {
+    width: 150px;
+    height: 230px;
+  }
+
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .releasebox {
+    width: 130px;
+    height: 210px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}

@@ -1,0 +1,78 @@
+<div class="container">
+  <h1>Search</h1>
+
+  <div class="searchbar">
+    <input
+      #searchBox
+      id="search-box"
+      type="search"
+      placeholder="Search for artists, releases..."
+      [(ngModel)]="searchTerm"
+    />
+    <img
+      (click)="filterResults()"
+      src="../../assets/images/search.png"
+      alt=""
+    />
+  </div>
+
+  <div @fade *ngIf="showResults === 'shown'">
+    <div class="artistresults" *ngIf="artists.length > 0">
+      <h2>Artists</h2>
+
+      <div
+        *ngFor="let artist of artists.slice(0, artistRows * 3)"
+        class="artistLink"
+        [routerLink]="['../artist/', artist.artist_id]"
+      >
+        {{ artist.artist }}
+      </div>
+
+      <button
+        *ngIf="artists.length > artistRows * 3"
+        (click)="moreRows('a')"
+        mat-stroked-button
+      >
+        Load more results
+      </button>
+    </div>
+
+    <h2 *ngIf="releases.length > 0">Releases</h2>
+
+    <table>
+      <tr *ngFor="let release of releases.slice(0, releaseRows * 4)">
+        <th
+          class="releaseLink"
+          [routerLink]="[
+            '../artist/',
+            release.artist_id,
+            'release',
+            release.release_id
+          ]"
+        >
+          {{ release.title }}
+        </th>
+
+        <td
+          class="artistLinkTable"
+          [routerLink]="['../artist/', release.artist_id]"
+        >
+          {{ release.artist }}
+        </td>
+        <td>{{ release.type }}</td>
+      </tr>
+    </table>
+
+    <button
+      *ngIf="releases.length > releaseRows * 4"
+      (click)="moreRows('s')"
+      mat-stroked-button
+    >
+      Load more
+    </button>
+
+    <div *ngIf="releases.length === 0 && artists.length === 0">
+      <p>No results</p>
+    </div>
+  </div>
+</div>

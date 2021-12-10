@@ -1,0 +1,64 @@
+<div class="container">
+  <div *ngIf="found === 'found'">
+    <div class="releaseLayout">
+      <img
+        class="coverArt"
+        src="{{ artistdata.releases[releaseId].img }}"
+        alt=""
+      />
+
+      <div class="releaseInfo">
+        <p class="releaseType">{{ artistdata.releases[releaseId].type }}</p>
+
+        <h1>{{ artistdata.releases[releaseId].title }}</h1>
+
+        <div class="releaseArtistAndYear">
+          <a [routerLink]="['../../../../artist/', artistdata.artist_id]">{{
+            artistdata.artist
+          }}</a>
+          <p>
+            <span class="releaseYear"
+              >, {{ artistdata.releases[releaseId].year }}</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tracklist">
+      <div>
+        <p class="tracklistTitle">Tracklist:</p>
+
+        <div
+          class="track"
+          *ngFor="
+            let track of artistdata.releases[releaseId].tracks;
+            let i = index
+          "
+          (click)="
+            playSong(
+              artistdata.releases[releaseId].tracks,
+              i,
+              artistdata.artist,
+              artistdata.releases[releaseId].img
+            )
+          "
+        >
+          <p>
+            <span class="trackIndex">{{ i + 1 }}. </span>{{ track.title }}
+          </p>
+          <mat-divider
+            *ngIf="i + 1 !== artistdata.releases[releaseId].tracks.length"
+            class="divider"
+          ></mat-divider>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notFound" *ngIf="found === 'error'">
+    <h1>Not found...</h1>
+
+    <img src="../../assets/images/404.png" alt="404" />
+  </div>
+</div>

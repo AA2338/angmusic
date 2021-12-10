@@ -1,0 +1,91 @@
+<div class="container">
+  <div *ngIf="found === 'found'">
+    <h1>{{ artistdata.artist }}</h1>
+
+    <div *ngIf="albums.length !== 0">
+      <h2>Albums:</h2>
+
+      <div class="releaseGrid">
+        <div
+          *ngFor="let release of albums.slice(0, albumRows * 4)"
+          [routerLink]="['./release/', release.release_id]"
+          class="releasebox"
+        >
+          <div class="hoverColor releasebox">
+            <img src="{{ release.img }}" alt="" />
+            <h2>{{ release.title }}</h2>
+            <p>
+              {{ release.year }}
+            </p>
+          </div>
+        </div>
+
+        <div
+          *ngIf="albumRows * 4 > albums.length && 1 === albums.length % 4"
+          class="releasebox"
+        ></div>
+        <div
+          *ngIf="albumRows * 4 > albums.length && 2 >= albums.length % 4"
+          class="releasebox"
+        ></div>
+        <div
+          *ngIf="albumRows * 4 > albums.length && 3 >= albums.length % 4"
+          class="releasebox"
+        ></div>
+      </div>
+
+      <button
+        *ngIf="albums.length >= albumRows * 4"
+        (click)="moreRows('a')"
+        mat-stroked-button
+      >
+        Load more
+      </button>
+    </div>
+
+    <h2 *ngIf="singles.length !== 0">Singles:</h2>
+
+    <div *ngIf="singles.length !== 0" class="releaseGrid">
+      <div
+        *ngFor="let release of singles.slice(0, singleRows * 4)"
+        [routerLink]="['./release/', release.release_id]"
+        class="releasebox"
+      >
+        <div class="hoverColor releasebox">
+          <img src="{{ release.img }}" alt="" />
+          <h2>{{ release.title }}</h2>
+          <p>
+            {{ release.year }}
+          </p>
+        </div>
+      </div>
+
+      <div
+        *ngIf="singleRows * 4 > singles.length && 1 === singles.length % 4"
+        class="releasebox"
+      ></div>
+      <div
+        *ngIf="singleRows * 4 > singles.length && 2 >= singles.length % 4"
+        class="releasebox"
+      ></div>
+      <div
+        *ngIf="singleRows * 4 > singles.length && 3 >= singles.length % 4"
+        class="releasebox"
+      ></div>
+    </div>
+
+    <button
+      *ngIf="singles.length >= singleRows * 4"
+      (click)="moreRows('s')"
+      mat-stroked-button
+    >
+      Load more
+    </button>
+  </div>
+
+  <div class="notFound" *ngIf="found === 'error'">
+    <h1>Not found...</h1>
+
+    <img src="../../assets/images/404.png" alt="404" />
+  </div>
+</div>

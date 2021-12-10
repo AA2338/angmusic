@@ -1,0 +1,128 @@
+.container {
+  width: 70%;
+  max-width: 1400px;
+  min-width: 400px;
+  margin: 70px auto 20px auto;
+}
+
+.releaseLayout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.coverArt {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 12px -6px #000000;
+  box-shadow: 2px 2px 12px -6px #000000;
+}
+
+.releaseType {
+  color: rgb(144, 144, 144);
+  margin: 110px 0px 15px 25px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.releaseInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.releaseInfo h1 {
+  margin: 0px 0px 20px 25px;
+  font-size: 2.6rem;
+  font-weight: 100;
+}
+
+.releaseArtistAndYear {
+  color: rgb(144, 144, 144);
+  margin-left: 25px;
+  font-size: 1.3em;
+  font-weight: 400;
+  display: flex;
+}
+
+.releaseArtistAndYear a {
+  text-decoration: none;
+  color: rgb(144, 144, 144);
+}
+
+.releaseArtistAndYear a:hover {
+  text-decoration: none;
+  color: rgb(47, 189, 241);
+}
+
+.tracklistTitle {
+  margin: 35px 0px 45px 15px;
+  color: rgb(0, 0, 0);
+
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+.tracklist {
+  width: 100%;
+  margin: auto;
+  grid-column-start: 0;
+}
+
+.trackIndex {
+  color: rgb(144, 144, 144);
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+.divider {
+  width: 96.5%;
+  margin: 20px auto 0px auto;
+}
+
+.track {
+  margin: 20px 0px 10px 20px;
+  color: black;
+  font-size: 1.6em;
+  font-weight: 300;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  cursor: pointer;
+}
+
+.track:hover {
+  color: rgb(47, 189, 241);
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .releaseLayout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .coverArt {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .releaseType {
+    margin: 70px 0px 15px 25px;
+  }
+
+  .releaseInfo h1 {
+    font-size: 1.8rem;
+  }
+
+  .releaseYear {
+    display: none;
+  }
+}

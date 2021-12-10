@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Browse by genre</h1>
+
+  <div class="genreContainer">
+    <div
+      class="genreButton"
+      [ngClass]="{ selectedGenre: genre === shownType }"
+      *ngFor="let genre of genresList"
+      (click)="genreFilter(genre)"
+    >
+      {{ genre }}
+    </div>
+  </div>
+
+  <h1>{{ shownType }} releases</h1>
+
+  <div class="releaseGrid">
+    <div @fade *ngFor="let release of shownReleases.slice(0, rows * 4)">
+      <div *ngIf="ngForStatus === 'shown'" class="releasebox">
+        <div class="hoverColor">
+          <img
+            src="{{ release.release.img }}"
+            alt=""
+            (click)="linkToRelease(release)"
+          />
+          <h2 (click)="linkToRelease(release)">{{ release.release.title }}</h2>
+        </div>
+        <p class="artistLink" (click)="linkToArtist(release.artist_id)">
+          {{ release.artist }}
+        </p>
+      </div>
+    </div>
+    <div
+      *ngIf="rows * 4 > shownReleases.length && 1 === shownReleases.length % 4"
+      class="releasebox"
+    ></div>
+    <div
+      *ngIf="rows * 4 > shownReleases.length && 2 >= shownReleases.length % 4"
+      class="releasebox"
+    ></div>
+    <div
+      *ngIf="rows * 4 > shownReleases.length && 3 >= shownReleases.length % 4"
+      class="releasebox"
+    ></div>
+  </div>
+
+  <button
+    *ngIf="shownReleases.length > rows * 4"
+    (click)="moreRows()"
+    mat-stroked-button
+  >
+    Load more
+  </button>
+</div>

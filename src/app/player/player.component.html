@@ -1,0 +1,108 @@
+<div class="player">
+  <div class="playerContainer">
+    <div class="songInfo">
+      <div class="songInfoContainer">
+        <img
+          src="{{ currentSongImg }}"
+          alt="Cover"
+          class="cover"
+          *ngIf="currentPlaylist"
+        />
+        <img
+          src="{{ currentSongImg }}"
+          alt="Cover"
+          class="cover coverOpacity"
+          *ngIf="!currentPlaylist"
+        />
+        <div class="songInfoText" *ngIf="currentPlaylist">
+          <h2>{{ currentSong.title }}</h2>
+          <p>{{ currentPlaylist.artist }}</p>
+        </div>
+        <div class="songInfoText" *ngIf="!currentPlaylist">
+          <h2>Track title</h2>
+          <p>Artist</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="playerMainStuff">
+      <div class="playerMainStuffContent">
+        <div class="playerButtons">
+          <img
+            class="arrowIcon"
+            src="../../assets/images/backward.png"
+            alt="Backward"
+            (click)="back()"
+            (dblclick)="doubleClickBack()"
+          />
+
+          <img
+            class="playPauseIcon"
+            *ngIf="songPlaying"
+            src="../../assets/images/pause-round.png"
+            (click)="playPause()"
+            alt="Pause"
+          />
+
+          <img
+            class="playPauseIcon"
+            *ngIf="!songPlaying"
+            src="../../assets/images/play-round.png"
+            (click)="playPause()"
+            alt="Play"
+          />
+
+          <img
+            class="arrowIcon"
+            src="../../assets/images/forward.png"
+            alt="Forward"
+            (click)="forward()"
+          />
+        </div>
+
+        <progress
+          class="songProgress"
+          value="{{ time }}"
+          max="{{ currentSongDuration }}"
+        ></progress>
+      </div>
+    </div>
+
+    <div class="playerVolumeStuff">
+      <img
+        (click)="toggleMute()"
+        *ngIf="volume >= 0.5"
+        class="volumeIcon"
+        src="../../assets/images/volume.png"
+        alt="Vol"
+      />
+
+      <img
+        (click)="toggleMute()"
+        *ngIf="volume > 0 && 0.5 > volume"
+        class="volumeIcon"
+        src="../../assets/images/volume-quiet.png"
+        alt="Vol"
+      />
+
+      <img
+        (click)="toggleMute()"
+        *ngIf="volume === 0"
+        class="volumeIcon"
+        src="../../assets/images/volume-mute.png"
+        alt="Vol"
+      />
+
+      <div class="volSlider">
+        <input
+          type="range"
+          class="slider"
+          min="0"
+          max="1"
+          step="0.05"
+          [(ngModel)]="volume"
+        />
+      </div>
+    </div>
+  </div>
+</div>

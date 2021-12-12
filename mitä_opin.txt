@@ -1,0 +1,8 @@
+Merkittävin asia, jonka tätä lopputyötä tehdessäni opin on syvempi 
+ymmärrys siitä, kuinka Angular toimii, ja kuinka sillä rakennetaan
+sovelluksia.
+
+Tämän lisäksi opin monia pienempiä asioita, kuten:
+- Datan varastoiminen ja hakeminen oikealta palvelimelta
+- Äänitiedostojen toiminta ja käsitteleminen
+- Angularin animaatioiden perusteet

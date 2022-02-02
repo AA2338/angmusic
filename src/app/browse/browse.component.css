@@ -167,22 +167,6 @@ h1 {
   cursor: pointer;
 }
 
-.Pop {
-  background-color: #ecd368;
-}
-
-.Rock {
-  background-color: #dd7556;
-}
-
-.Electronic {
-  background-color: #4b9088;
-}
-
-.Blues {
-  background-color: #1f6b90;
-}
-
 @media only screen and (max-width: 1000px) {
   .releasebox {
     width: 150px;
@@ -207,4 +191,19 @@ h1 {
   .genreButton {
     width: 90px;
   }
+}
+
+.metainfo {
+  font-size: 1.2em;
+  text-align: justify;
+  margin-bottom: 25px;
+  background-color: rgb(245, 245, 245);
+  padding: 30px 30px 20px 30px;
+  border-radius: 10px;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+.italic {
+  font-style: italic;
 }

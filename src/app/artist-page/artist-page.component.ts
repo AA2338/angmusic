@@ -55,7 +55,6 @@ export class ArtistPageComponent implements OnInit {
   }
 
   linkClick(a: number) {
-    console.log(a);
     this.router.navigate([`/artist/${this.idNumber}/release/${a}`]);
   }
 

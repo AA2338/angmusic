@@ -77,3 +77,20 @@ td,
   user-select: none;
   -o-user-select: none;
 }
+
+.greytext {
+  color: rgb(56, 56, 56);
+}
+
+.searchtitle {
+  display: flex;
+}
+
+.infoicon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 5px;
+  left: 10px;
+  opacity: 50%;
+}

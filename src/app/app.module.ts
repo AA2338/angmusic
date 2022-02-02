@@ -25,6 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDividerModule,
     MatAutocompleteModule,
     MatFormFieldModule,
+    MatTooltipModule,
   ],
   providers: [SongService],
   bootstrap: [AppComponent],

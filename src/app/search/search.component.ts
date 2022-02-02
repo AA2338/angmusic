@@ -32,7 +32,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getAllData().subscribe((loadedData) => {
       this.data = loadedData;
-      console.log(this.data);
     });
   }
 

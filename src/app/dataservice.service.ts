@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import apiUrl from '../assets/apiUrl.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Dataservice {
-  dataUrl: string =
-    'https://music-database-d7799-default-rtdb.europe-west1.firebasedatabase.app/';
+  dataUrl: string = apiUrl.url;
 
   constructor(private http: HttpClient) {}
 

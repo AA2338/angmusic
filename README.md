@@ -1,9 +1,7 @@
 # Lopputyö
 
-Tämä sivusto on JAMK:in Frontend-sovelluskehitys -kurssilla syksyllä 2021 tekemäni lopputyö. Se on yksinkertainen musiikin striimauspalvelu, joka on tehty käyttäen Angularia. Sivustolla voit hakea julkaisuja Google Firebaseen luomastani tietokannasta, joka sisältää (tekijänoikeusvapaata) musiikkia.
+Tämä sivusto on JAMK:in Frontend-sovelluskehitys -kurssilla syksyllä 2021 tekemäni lopputyö. Se on toteutettu Angularilla, ja tietokantana toimii Firebase.
 
-Kaikille julkaisuille on määritelty muun muassa esittäjä, genre, kansikuva ja julkaisuvuosi. Klikkaamalla pääset kunkin julkaisun sivulle, josta pystyt sitten laittamaan kappaleen soimaan. Myös jokaisella artistilla on oma sivunsa, josta näet kaikki tämän julkaisut. Sivun pohjalla näkyvä musiikkisoitin on myös minun tekemäni.
+Kyseessä on yksinkertainen musiikin striimauspalvelu, joka sisältää löytämääni (tekijänoikeusvapaata) musiikkia. Sovelluksessa voi kappaleiden / albumien kuuntelun lisäksi selailla ja hakea eri genrejen ja artistien musiikkia.
 
-Sivusto käynnistyy komennolla "npm start".
-
-Ville Kuusela
+Kuvia sovelluksesta, sekä tietoa muista projekteistani löytyy [portfoliostani](https://ville-kuusela.github.io/#/projektit/4).
